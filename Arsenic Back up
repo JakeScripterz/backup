@@ -1,0 +1,119 @@
+if game.PlaceId == 10449761463 then
+   local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+   
+   local Window = Rayfield:CreateWindow({
+      Name = "Arsenic Hub",
+      Icon = 0, 
+      LoadingTitle = "Arsenic Hub Is Loading",
+      LoadingSubtitle = "by JacKScripterz",
+      Theme = "Default",
+      DisableRayfieldPrompts = false,
+      DisableBuildWarnings = false, 
+      ConfigurationSaving = {
+         Enabled = false,
+         FolderName = nil, 
+         FileName = "Skibidi_Scripterz_hub"
+      },
+      Discord = {
+         Enabled = false,
+         Invite = "noinvitelink", 
+         RememberJoins = true 
+      },
+      KeySystem = false, 
+      KeySettings = {
+         Title = "Untitled",
+         Subtitle = "Key System",
+         Note = "No method of obtaining the key is provided", 
+         FileName = "Key", 
+         SaveKey = true, 
+         GrabKeyFromSite = false, 
+         Key = {"Hello"} 
+      }
+   })
+   
+   local MainTab = Window:CreateTab("Home", nil)
+   local MainSection = MainTab:CreateSection("Custom Movesets")
+   
+   Rayfield:Notify({
+      Title = "Made By JacKScripterz",
+      Content = "Welcome to Arsenic Hub",  -- Added missing comma
+      Duration = 5,
+      Image = nil
+   })
+   
+   local Button = MainTab:CreateButton({
+      Name = "Strongest Hero into Mahito",
+      Callback = function()
+          loadstring(game:HttpGet('https://raw.githubusercontent.com/JakeScripterz/Mahito-Script-TSB/refs/heads/main/Mahito%20V3'))()
+      end
+   })
+   
+   local Button = MainTab:CreateButton({
+      Name = "Strongest Hero to Hakari",
+      Callback = function()
+          loadstring(game:HttpGet("https://pastebin.com/raw/eEDYWj8p"))()
+      end
+   })
+   
+   local Button = MainTab:CreateButton({
+      Name = "Strongest Hero to Jun",
+      Callback = function()
+          loadstring(game:HttpGet("https://gist.githubusercontent.com/GoldenHeads2/f66279000c58a020e894a6db44914838/raw/62e53e1acacec0b38b43cd0f594292c32e09c39b/gistfile1.txt"))()
+      end
+   })
+
+   local Button = MainTab:CreateButton({
+      Name = "Strongest Hero to Unbounded Gojo",
+      Callback = function()
+         getgenv().morph = false 
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/BaldyToSorcerer/refs/heads/main/LatestV2.lua"))()
+      end
+   })
+
+   local Button = MainTab:CreateButton({
+      Name = "Deadly Ninja to VOLTA",
+      Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/TSB/refs/heads/main/VOLTA.lua"))()
+      end
+   })
+
+   local Button = MainTab:CreateButton({
+      Name = "Hero Hunter to ARCAURA",
+      Callback = function()
+         getgenv().OptimizeUltimate = true
+         getgenv().ReduceUltFlash = true
+         getgenv().Move1Insta = true
+         getgenv().LowQualityMode = true
+         getgenv().BetaConsole = false
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/TSB/refs/heads/main/ARCAURA.lua"))() 
+      end
+   })
+
+   local Button = MainTab:CreateButton({
+      Name = "Brutal Demon to APOPHENIA",
+      Callback = function()
+         getgenv().Music = false 
+         getgenv().AttackQuality = 'Low'
+         getgenv().ConstantSpeed = false
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/TSB/main/APOPHENIA.lua"))()
+      end
+   })
+
+   local MainSection2 = MainTab:CreateSection("Miscellaneous")
+
+   local Button = MainTab:CreateButton({
+      Name = "Run Tool",
+      Callback = function()
+         loadstring(game:HttpGet('https://raw.githubusercontent.com/JakeScripterz/Run-Tool/refs/heads/main/Phantom%20Dash'))()
+      end
+   })
+
+   local Button = MainTab:CreateButton({
+      Name = "TP Tool",
+      Callback = function()
+         loadstring(game:HttpGet('https://raw.githubusercontent.com/JakeScripterz/TP-Tool/refs/heads/main/Shadow-Step'))()
+      end
+   })
+
+   Rayfield:LoadConfiguration()
+end
