@@ -5,9 +5,9 @@ for _, child in ipairs(fx7:GetChildren()) do
     if child:IsA("ParticleEmitter") then
         -- Dynamic color transition effect
         child.Color = ColorSequence.new({
-            ColorSequenceKeypoint.new(0, Color3.fromRGB(160, 32, 240)), -- Start with purple
-            ColorSequenceKeypoint.new(0.5, Color3.fromRGB(255, 0, 255)), -- Transition to pink
-            ColorSequenceKeypoint.new(1, Color3.fromRGB(160, 32, 240)) -- Back to purple
+            ColorSequenceKeypoint.new(0, Color3.fromRGB(33, 27, 29)), -- Start with black
+            ColorSequenceKeypoint.new(0.5, Color3.fromRGB(199, 18, 12)), -- Transition to red
+            ColorSequenceKeypoint.new(1, Color3.fromRGB(33, 27, 29)) -- Back to black
         })
 
         -- Dynamic size transition
@@ -30,9 +30,9 @@ for _, child in ipairs(fx7:GetChildren()) do
     if child:IsA("ParticleEmitter") then
         -- Use the same dynamic effects for consistency
         child.Color = ColorSequence.new({
-            ColorSequenceKeypoint.new(0, Color3.fromRGB(160, 32, 240)), -- Start with purple
-            ColorSequenceKeypoint.new(0.5, Color3.fromRGB(255, 0, 255)), -- Transition to pink
-            ColorSequenceKeypoint.new(1, Color3.fromRGB(160, 32, 240)) -- Back to purple
+            ColorSequenceKeypoint.new(0, Color3.fromRGB(33, 27, 29)), -- Start with black
+            ColorSequenceKeypoint.new(0.5, Color3.fromRGB(199, 18, 12)), -- Transition to red
+            ColorSequenceKeypoint.new(1, Color3.fromRGB(33, 27, 29)) -- Back to black
         })
 
         -- Dynamic size transition
