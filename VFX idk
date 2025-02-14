@@ -1,0 +1,47 @@
+-- Right Arm Effects
+local fx7 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        -- Dynamic color transition effect
+        child.Color = ColorSequence.new({
+            ColorSequenceKeypoint.new(0, Color3.fromRGB(160, 32, 240)), -- Start with purple
+            ColorSequenceKeypoint.new(0.5, Color3.fromRGB(255, 0, 255)), -- Transition to pink
+            ColorSequenceKeypoint.new(1, Color3.fromRGB(160, 32, 240)) -- Back to purple
+        })
+
+        -- Dynamic size transition
+        child.Size = NumberSequence.new({
+            NumberSequenceKeypoint.new(0, 0),   -- Start small
+            NumberSequenceKeypoint.new(0.5, 2), -- Grow to size 2
+            NumberSequenceKeypoint.new(1, 0)    -- Fade to nothing
+        })
+
+        child:Emit(1) -- Emit 1 particle
+    end
+end
+
+task.wait(0.1)
+
+-- Left Arm Effects
+local fx7 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Left Arm"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        -- Use the same dynamic effects for consistency
+        child.Color = ColorSequence.new({
+            ColorSequenceKeypoint.new(0, Color3.fromRGB(160, 32, 240)), -- Start with purple
+            ColorSequenceKeypoint.new(0.5, Color3.fromRGB(255, 0, 255)), -- Transition to pink
+            ColorSequenceKeypoint.new(1, Color3.fromRGB(160, 32, 240)) -- Back to purple
+        })
+
+        -- Dynamic size transition
+        child.Size = NumberSequence.new({
+            NumberSequenceKeypoint.new(0, 0),   -- Start small
+            NumberSequenceKeypoint.new(0.5, 2), -- Grow to size 2
+            NumberSequenceKeypoint.new(1, 0)    -- Fade to nothing
+        })
+
+        child:Emit(1) -- Emit 1 particle
+    end
+end
